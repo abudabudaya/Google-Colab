@@ -31,6 +31,7 @@ A Collection of Google Colab Notebooks for scripts & projects
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/Wan2_1_VACE_Img2Img_PoseTransfer.ipynb)  | Wan 2.1 VACE 14B & CausVid LoRA for Image to Image Pose Transfer (Experimental)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/flux/Flux1_Kontext_Dev.ipynb)  | Use Prompts to Edit Images with Flux.1 Kontext Dev
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/wan_2_1/Faster_wan2_1_Causvid_Lightx2v_FusionX.ipynb)  | Faster I2V with Wan2.1 using Causvid, Lightx2v & Fusionx LoRAs
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/wan2_2/wan22_Lightx2v.ipynb)  | I2V with Wan2.2 using Lightx2v LoRA
 
 
 ## Notebook Guide
