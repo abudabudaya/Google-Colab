@@ -35,7 +35,7 @@ A Collection of Google Colab Notebooks for scripts & projects
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/wan2_2/wan22_T2V_Lightx2v.ipynb)  | T2V with Wan2.2 using Lightx2v LoRA
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/wan2_2/wan22_FirstLastFrame2Video.ipynb)  | First-Last Frame to Video with Wan2.2
 
-You can find more notebooks here: [here](https://isinse.gumroad.com/) 
+You can find more notebooks [here](https://isinse.gumroad.com/) 
 
 
 ## Notebook Guide
