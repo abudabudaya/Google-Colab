@@ -36,7 +36,7 @@ A Collection of Google Colab Notebooks for scripts & projects
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/wan2_2/wan22_FirstLastFrame2Video.ipynb)  | First-Last Frame to Video with Wan2.2
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/Sonic_Image_Audio_to_Video.ipynb)  | Audio-driven Portrait Animation with Sonic
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/wan_2_1/wan21_based_InfiniteTalk_&_MultiTalk.ipynb)  | Audio-driven Animation with InfiniteTalk & MultiTalk (Compute units Required)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/Qwen_Image/Qwen_Image_Gen_Edit.ipynb)  | Qwen-Image for generating & Editing Images 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/Qwen_Image/Qwen_Image_Gen_Edit.ipynb)  | Qwen-Image for Generating & Editing Images 
 
 
 You can find more notebooks [here](https://isinse.gumroad.com/) 
