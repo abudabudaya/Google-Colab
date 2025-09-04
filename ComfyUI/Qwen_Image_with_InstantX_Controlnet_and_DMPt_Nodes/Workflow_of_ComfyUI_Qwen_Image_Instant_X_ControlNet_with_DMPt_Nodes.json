@@ -1,0 +1,1293 @@
+{
+  "id": "91f6bbe2-ed41-4fd6-bac7-71d5b5864ecb",
+  "revision": 0,
+  "last_node_id": 121,
+  "last_link_id": 232,
+  "nodes": [
+    {
+      "id": 111,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        384.6264343261719,
+        522.2626342773438
+      ],
+      "size": [
+        197.712890625,
+        26
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 195
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            196
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 66,
+      "type": "ModelSamplingAuraFlow",
+      "pos": [
+        765.7592163085938,
+        74.14655303955078
+      ],
+      "size": [
+        310,
+        58
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 149
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            156
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingAuraFlow",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        3.1000000000000005
+      ]
+    },
+    {
+      "id": 80,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        239.1534881591797,
+        36.08346939086914
+      ],
+      "size": [
+        430,
+        82
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 206
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            149
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51",
+        "models": [
+          {
+            "name": "Qwen-Image-Lightning-4steps-V1.0.safetensors",
+            "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-4steps-V1.0.safetensors",
+            "directory": "loras"
+          }
+        ]
+      },
+      "widgets_values": [
+        "Qwen-Image-Lightning-4steps-V1.0-bf16.safetensors",
+        1
+      ]
+    },
+    {
+      "id": 76,
+      "type": "VAEEncode",
+      "pos": [
+        837.0908203125,
+        326.6964111328125
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 229
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 222
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            142
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 38,
+      "type": "CLIPLoader",
+      "pos": [
+        -206.00332641601562,
+        208.7288055419922
+      ],
+      "size": [
+        380,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            74,
+            194
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51",
+        "models": [
+          {
+            "name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "qwen_image",
+        "default"
+      ]
+    },
+    {
+      "id": 110,
+      "type": "DeleteModelPassthrough",
+      "pos": [
+        796.3784790039062,
+        189.9717254638672
+      ],
+      "size": [
+        242.22323608398438,
+        46
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 198
+        },
+        {
+          "name": "model",
+          "type": "*",
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            199,
+            215
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DeleteModelPassthrough"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 113,
+      "type": "DeleteModelPassthrough",
+      "pos": [
+        789.4837646484375,
+        461.1971435546875
+      ],
+      "size": [
+        242.22323608398438,
+        46
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 204
+        },
+        {
+          "name": "model",
+          "type": "*",
+          "link": 209
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            205,
+            223
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DeleteModelPassthrough"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 39,
+      "type": "VAELoader",
+      "pos": [
+        -204.55873107910156,
+        368.7283935546875
+      ],
+      "size": [
+        380,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            220,
+            221,
+            222
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51",
+        "models": [
+          {
+            "name": "qwen_image_vae.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen_image_vae.safetensors"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1184.529541015625,
+        703.646240234375
+      ],
+      "size": [
+        310,
+        46
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 232
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 220
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            110
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 114,
+      "type": "ControlledUnetLoaderGGUF",
+      "pos": [
+        -162.8913116455078,
+        74.439697265625
+      ],
+      "size": [
+        300.6372985839844,
+        58
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trigger",
+          "type": "*",
+          "link": 223
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            206
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlledUnetLoaderGGUF"
+      },
+      "widgets_values": [
+        "qwen-image-Q4_K_M.gguf"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "Note",
+      "pos": [
+        767.8790893554688,
+        -74.01461791992188
+      ],
+      "size": [
+        310,
+        90
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Increase the shift if you get too many blury/dark/bad images. Decrease if you want to try increasing detail."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 71,
+      "type": "LoadImage",
+      "pos": [
+        -149.6576690673828,
+        697.1502685546875
+      ],
+      "size": [
+        274.080078125,
+        314.00006103515625
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            231
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "download - 2025-08-22T204735.938.png",
+        "image"
+      ]
+    },
+    {
+      "id": 120,
+      "type": "ResizeAndPadImage",
+      "pos": [
+        -136.24710083007812,
+        1058.2393798828125
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 231
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            228,
+            229
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResizeAndPadImage"
+      },
+      "widgets_values": [
+        400,
+        736,
+        "black",
+        "area"
+      ]
+    },
+    {
+      "id": 60,
+      "type": "SaveImage",
+      "pos": [
+        1557.67724609375,
+        94.19717407226562
+      ],
+      "size": [
+        462.8955078125,
+        637.0301513671875
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 110
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        238.30958557128906,
+        251.4835205078125
+      ],
+      "size": [
+        460,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            195,
+            198
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "A beautiful couple, comic style"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        1172.2490234375,
+        74.69316864013672
+      ],
+      "size": [
+        310,
+        430
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 156
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 205
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 155
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 142
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            232
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        947031964558474,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        0.58
+      ]
+    },
+    {
+      "id": 116,
+      "type": "ControlledControlNetLoader",
+      "pos": [
+        -192.3638458251953,
+        492.1144104003906
+      ],
+      "size": [
+        361.4633483886719,
+        71.00267791748047
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "trigger",
+          "type": "*",
+          "link": 215
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            209,
+            210
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlledControlNetLoader"
+      },
+      "widgets_values": [
+        "Qwen-Image-InstantX-ControlNet-Union.safetensors"
+      ]
+    },
+    {
+      "id": 118,
+      "type": "DWPreprocessor",
+      "pos": [
+        373.77325439453125,
+        1212.8524169921875
+      ],
+      "size": [
+        262.0539245605469,
+        199.58921813964844
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "POSE_KEYPOINT",
+          "type": "POSE_KEYPOINT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DWPreprocessor"
+      },
+      "widgets_values": [
+        "enable",
+        "enable",
+        "enable",
+        512,
+        "yolox_l.onnx",
+        "dw-ll_ucoco_384_bs5.torchscript.pt"
+      ]
+    },
+    {
+      "id": 119,
+      "type": "AnyLineArtPreprocessor_aux",
+      "pos": [
+        372.0390930175781,
+        976.3487548828125
+      ],
+      "size": [
+        274.091796875,
+        178
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AnyLineArtPreprocessor_aux"
+      },
+      "widgets_values": [
+        "lineart_standard",
+        1280,
+        0,
+        1,
+        36,
+        1
+      ]
+    },
+    {
+      "id": 72,
+      "type": "Canny",
+      "pos": [
+        382.3866271972656,
+        822.6396484375
+      ],
+      "size": [
+        240,
+        90
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Canny",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        0.1,
+        0.2
+      ]
+    },
+    {
+      "id": 109,
+      "type": "DepthAnythingPreprocessor",
+      "pos": [
+        370.1337890625,
+        690.078857421875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 228
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            190,
+            191
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DepthAnythingPreprocessor"
+      },
+      "widgets_values": [
+        "depth_anything_vitl14.pth",
+        384
+      ]
+    },
+    {
+      "id": 85,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        838.34814453125,
+        699.75
+      ],
+      "size": [
+        220,
+        186
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 199
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 196
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 210
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 190
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 221
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            204
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            155
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 73,
+      "type": "PreviewImage",
+      "pos": [
+        838.3482666015625,
+        929.749755859375
+      ],
+      "size": [
+        230,
+        258
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 191
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 121,
+      "type": "Note",
+      "pos": [
+        -225.38531494140625,
+        -288.1842346191406
+      ],
+      "size": [
+        468.4110107421875,
+        118.50041961669922
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Qwen Image with Instant X controlnet",
+      "properties": {},
+      "widgets_values": [
+        "This workflow gives black image outputs with the T4 GPU whenever the instantx controlnet is enabled. This is the reason for bypassing the controlnet loader and associated nodes based on the assumption that you are using the T4. The denoise value can be set to 0.56 - 0.65 for image to image sampling without controlnet.\nIf using the L4, then enable the controlnet loader and associated nodes, and increase the denoise value up to 1."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      74,
+      38,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      110,
+      8,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      142,
+      76,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      149,
+      80,
+      0,
+      66,
+      0,
+      "MODEL"
+    ],
+    [
+      155,
+      85,
+      1,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      156,
+      66,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      190,
+      109,
+      0,
+      85,
+      3,
+      "IMAGE"
+    ],
+    [
+      191,
+      109,
+      0,
+      73,
+      0,
+      "IMAGE"
+    ],
+    [
+      194,
+      38,
+      0,
+      110,
+      1,
+      "*"
+    ],
+    [
+      195,
+      6,
+      0,
+      111,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      196,
+      111,
+      0,
+      85,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      198,
+      6,
+      0,
+      110,
+      0,
+      "*"
+    ],
+    [
+      199,
+      110,
+      0,
+      85,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      204,
+      85,
+      0,
+      113,
+      0,
+      "*"
+    ],
+    [
+      205,
+      113,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      206,
+      114,
+      0,
+      80,
+      0,
+      "MODEL"
+    ],
+    [
+      209,
+      116,
+      0,
+      113,
+      1,
+      "*"
+    ],
+    [
+      210,
+      116,
+      0,
+      85,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      215,
+      110,
+      0,
+      116,
+      0,
+      "*"
+    ],
+    [
+      220,
+      39,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      221,
+      39,
+      0,
+      85,
+      4,
+      "VAE"
+    ],
+    [
+      222,
+      39,
+      0,
+      76,
+      1,
+      "VAE"
+    ],
+    [
+      223,
+      113,
+      0,
+      114,
+      0,
+      "*"
+    ],
+    [
+      228,
+      120,
+      0,
+      109,
+      0,
+      "IMAGE"
+    ],
+    [
+      229,
+      120,
+      0,
+      76,
+      0,
+      "IMAGE"
+    ],
+    [
+      231,
+      71,
+      0,
+      120,
+      0,
+      "IMAGE"
+    ],
+    [
+      232,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 6,
+      "title": "Qwen Image Edit with InstantX Controlnet",
+      "bounding": [
+        -224.55885314941406,
+        -147.6146240234375,
+        2255.131591796875,
+        1582.622802734375
+      ],
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 1,
+      "title": "Step 1 - Upload models",
+      "bounding": [
+        -214.55885314941406,
+        -12.829105377197266,
+        400,
+        610
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Step 2 - Upload reference image",
+      "bounding": [
+        -208.06858825683594,
+        631.22119140625,
+        400,
+        550
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Image processing and applying ControlNet",
+      "bounding": [
+        358.8606872558594,
+        616.4789428710938,
+        765.57470703125,
+        821.2428588867188
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "Step 3 - Prompt",
+      "bounding": [
+        218.19638061523438,
+        167.03604125976562,
+        490,
+        430
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "4 steps lightning LoRA",
+      "bounding": [
+        216.7516326904297,
+        -31.745588302612305,
+        490,
+        160
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6921650393277777,
+      "offset": [
+        402.4911652737932,
+        37.77186881230493
+      ]
+    },
+    "frontendVersion": "1.25.11"
+  },
+  "version": 0.4
+}
