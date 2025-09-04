@@ -1,8 +1,11 @@
 # Google-Colab_Notebooks
 A Collection of Google Colab Notebooks for scripts & projects
 
+
+
 | Notebook | Info
 | --- | --- |
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Qwen_Image_with_InstantX_Controlnet_and_DMPt_Nodes/ComfyUI_Qwen_Image_Instant_X_Control_with_DMPt_Nodes.ipynb)  | ComfyUI - Img2Img with Qwen-Image & InstantX-ControlNet-Union 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/video2Gif_(Basic).ipynb)  | Video to Gif (basic)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/LatentSync.ipynb)  | Lip Sync with LatentSync
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/Animate_X.ipynb)  | Animation with Animate-X
