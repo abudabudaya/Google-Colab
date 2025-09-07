@@ -5,6 +5,7 @@ A Collection of Google Colab Notebooks for scripts & projects
 
 | Notebook | Info
 | --- | --- |
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Qwen_Image_with_DiffSynth_Control_LoRA/ComfyUI_Qwen_Image_with_Diffsynth_Control_Union_LoRA.ipynb)  | ComfyUI - Img2Img with Qwen + DiffSynth-Control-LoRA
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Qwen_Image_with_DiffSynth_Controlnet/ComfyUI_Qwen_Image_with_DiffSynth_ControlNet_Model_Patches.ipynb)  | ComfyUI - Img2Img with Qwen + DiffSynth-ControlNet (Depth, Canny, Inpaint) (Compute units Required)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Qwen_Image_with_InstantX_Controlnet_and_DMPt_Nodes/ComfyUI_Qwen_Image_Instant_X_Control_with_DMPt_Nodes.ipynb)  | ComfyUI - Img2Img with Qwen + InstantX-ControlNet-Union 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/video2Gif_(Basic).ipynb)  | Video to Gif (basic)
