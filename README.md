@@ -5,6 +5,7 @@ A Collection of Google Colab Notebooks for scripts & projects
 
 | Notebook | Info
 | --- | --- |
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Wan22_VACE_Fun/ComfyUI_Wan22_VACE_Fun_A14B_preVACE.ipynb)  | ComfyUI - Img+Vid2Vid with VACE Fun (Compute units Required)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/ComfyUI_Flux1Dev_USO/ComfyUI_Flux1Dev_USO.ipynb)  | ComfyUI - Style and Subject-Driven Image Generation with Flux.1Dev-USO
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Qwen_Image_with_DiffSynth_Control_LoRA/ComfyUI_Qwen_Image_with_Diffsynth_Control_Union_LoRA.ipynb)  | ComfyUI - Img2Img with Qwen + DiffSynth-Control-LoRA
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Qwen_Image_with_DiffSynth_Controlnet/ComfyUI_Qwen_Image_with_DiffSynth_ControlNet_Model_Patches.ipynb)  | ComfyUI - Img2Img with Qwen + DiffSynth-ControlNet (Depth, Canny, Inpaint) (Compute units Required)
