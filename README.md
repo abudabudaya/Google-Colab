@@ -5,7 +5,7 @@ A Collection of Google Colab Notebooks for scripts & projects
 
 | Notebook | Info
 | --- | --- |
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Qwen_Image_Edit_Plus/ComfyUI_Qwen_Image_Edit_2509.ipynb)  | ComfyUI - 1 to 3 Images to Image with Qwen Image Edit 2509
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Qwen_Image_Edit_Plus/ComfyUI_Qwen_Image_Edit_2509.ipynb)  | ComfyUI - 1 to 3 Images to 1 Image with Qwen Image Edit 2509
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Wan_2_2_Animate/ComfyUI_Wan22_Animate.ipynb)  | ComfyUI - Img+Vid2Vid with Wan2.2 Animate (Tested on the L4)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/Wan22_VACE_Fun/ComfyUI_Wan22_VACE_Fun_A14B_preVACE.ipynb)  | ComfyUI - Img+Vid2Vid with VACE Fun (Compute units Required)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/ComfyUI/ComfyUI_Flux1Dev_USO/ComfyUI_Flux1Dev_USO.ipynb)  | ComfyUI - Style and Subject-Driven Image Generation with Flux.1Dev-USO
@@ -46,6 +46,9 @@ A Collection of Google Colab Notebooks for scripts & projects
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/Sonic_Image_Audio_to_Video.ipynb)  | Audio-driven Portrait Animation with Sonic
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/wan_2_1/wan21_based_InfiniteTalk_&_MultiTalk.ipynb)  | Audio-driven Animation with InfiniteTalk & MultiTalk (Compute units Required)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/Qwen_Image/Qwen_Image_Gen_Edit.ipynb)  | Qwen-Image for Generating & Editing Images 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Isi-dev/Google-Colab_Notebooks/blob/main/Qwen_Image/Qwen_Image_Edit_Plus.ipynb)  | Qwen-Image-Edit 2509 for 1-3 Images to 1 Image
+
+
 
 
 You can find more notebooks [here](https://isinse.gumroad.com/) 
